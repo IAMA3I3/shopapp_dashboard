@@ -16,14 +16,21 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: '#E11054',
+        // ...
+      },
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
+        'max-height': 'max-height'
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }
