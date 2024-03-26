@@ -10,8 +10,8 @@ const Artisans = ({ artisans, status, comments }) => {
     const [currentTab, setCurrentTab] = useState(null)
     const [displayArtisans, setDisplayArtisans] = useState([])
     const [sliceCount, setSliceCount] = useState({ from: 0, to: 15 })
-    const [currentStatus, setCurrentStatus] = useState({status: false, id: -1})
-    const [currentComment, setCurrentComment] = useState({comment: false, id: -1})
+    const [currentStatus, setCurrentStatus] = useState({ status: false, id: -1 })
+    const [currentComment, setCurrentComment] = useState({ comment: false, id: -1 })
 
     const tabs = { all: "all", ...status } // {all: 'all', active: 'active', inactive: 'inactive', pending: 'pending'}
 
@@ -35,8 +35,8 @@ const Artisans = ({ artisans, status, comments }) => {
 
 
     const handleCurrentStatus = (status, comment, id) => {
-        setCurrentStatus({status: status, id: id})
-        setCurrentComment({comment: comment, id: id})
+        setCurrentStatus({ status: status, id: id })
+        setCurrentComment({ comment: comment, id: id })
         setDropMenu({ open: false, index: -1 })
     }
 
